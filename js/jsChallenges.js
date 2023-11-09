@@ -17,23 +17,18 @@ function copyText(){
 }
 
 
-function checkComplete(){}
 
-
-
-
-
-function set1(){
+if(document.querySelector("#check")){
     document.querySelector("#check").addEventListener("click", toggleEmail)
 }
 
-function set2(){
+if(document.querySelector("#sameAddress")){
     document.querySelector("#sameAddress").addEventListener("click", copyText)
 }
 
-function set3(){
+if(document.querySelector("input[type=text]")){
     // https://stackoverflow.com/questions/4010356/form-validation-get-all-input-type-text-and-validate
     document.querySelector("input[type=text]").disabled = true
-    document.querySelectorAll("input").addEventListener("click", checkComplete)
+    //document.querySelectorAll("input").addEventListener("click", )
 }
 
