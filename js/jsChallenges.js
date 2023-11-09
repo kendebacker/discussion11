@@ -18,7 +18,7 @@ function copyText(){
 
 
 function checkComplete(){
-
+    
 }
 
 
@@ -26,9 +26,18 @@ function checkComplete(){
 
 
 
-document.querySelector("#check").addEventListener("click", toggleEmail)
-document.querySelector("#sameAddress").addEventListener("click", copyText)
-// https://stackoverflow.com/questions/4010356/form-validation-get-all-input-type-text-and-validate
-document.querySelector("input[type=text]").disabled = true
-document.querySelectorAll("input").addEventListener("click", checkComplete)
+
+if(window.location.href[window.location.href.length -6] === "1"){
+    document.querySelector("#check").addEventListener("click", toggleEmail)
+}
+
+if(window.location.href[window.location.href.length -6] === "2"){
+    document.querySelector("#sameAddress").addEventListener("click", copyText)
+}
+
+if(window.location.href[window.location.href.length -6] === "3"){
+    // https://stackoverflow.com/questions/4010356/form-validation-get-all-input-type-text-and-validate
+    document.querySelector("input[type=text]").disabled = true
+    document.querySelectorAll("input").addEventListener("click", checkComplete)
+}
 
