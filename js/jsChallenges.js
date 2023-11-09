@@ -17,25 +17,21 @@ function copyText(){
 }
 
 
-function checkComplete(){
-    
-}
+function checkComplete(){}
 
 
 
 
 
-
-
-if(window.location.href[window.location.href.length -6] === "1"){
+function set1(){
     document.querySelector("#check").addEventListener("click", toggleEmail)
 }
 
-if(window.location.href[window.location.href.length -6] === "2"){
+function set2(){
     document.querySelector("#sameAddress").addEventListener("click", copyText)
 }
 
-if(window.location.href[window.location.href.length -6] === "3"){
+function set3(){
     // https://stackoverflow.com/questions/4010356/form-validation-get-all-input-type-text-and-validate
     document.querySelector("input[type=text]").disabled = true
     document.querySelectorAll("input").addEventListener("click", checkComplete)
